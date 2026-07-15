@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title or "DS Business Unit — Pilotage des fonctions support | Bouches-du-Rhône" }}</title>
+<meta name="description" content="{{ description or "DS Business Unit pilote les fonctions administratives, financières, RH, achats et supply chain des TPE/PME pour améliorer durablement leur rentabilité." }}">
+{% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
+<link rel="stylesheet" href="/assets/css/styles.css">
+{% if isHome %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "DS Business Unit",
+  "description": "Pilotage des fonctions support (administratif, financier, RH, achats, supply chain) pour TPE et PME.",
+  "url": "https://ds-businessunit.fr",
+  "logo": "https://ds-businessunit.fr/assets/img/logo.png",
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Bouches-du-Rhône" },
+    { "@type": "Country", "name": "France" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gignac-la-Nerthe",
+    "postalCode": "13180",
+    "addressCountry": "FR"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "4" },
+  "review": [
+    { "@type": "Review", "author": { "@type": "Organization", "name": "Sanuki Sushi" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Notre restaurant n'avait pas été correctement fermé malgré l'intervention d'un expert-comptable. Elle a repris le dossier en urgence, réglé le blocage et mené la fermeture à son terme avec un grand professionnalisme." },
+    { "@type": "Review", "author": { "@type": "Organization", "name": "Acces Auto Prime" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Son implication, sa réactivité et son efficacité m'ont permis de débloquer rapidement la situation et de reprendre mon activité sereinement." },
+    { "@type": "Review", "author": { "@type": "Organization", "name": "Garage H2M" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "J'ai vraiment apprécié son accompagnement, sa disponibilité, sa pédagogie et surtout son professionnalisme." },
+    { "@type": "Review", "author": { "@type": "Organization", "name": "H'bloomy Traiteur Événementiel" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Son accompagnement a vraiment été un gros plus pour la création de mon entreprise." }
+  ]
+}
+</script>
+{% endif %}
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="/assets/img/logo.png" alt="Logo DS Business Unit — cabinet de pilotage de gestion d'entreprise à Gignac-la-Nerthe">
+      <span class="hero-eyebrow">DS Business Unit</span>
+    </a>
+    <nav class="main-nav">
+      <a href="/#mission">Notre approche</a>
+      <a href="/#expertises">Expertises</a>
+      <a href="/#cas-clients">Cas clients</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact" class="nav-cta">Prendre rendez-vous</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MENU MOBILE ============ -->
+<div class="mobile-nav">
+  <nav>
+    <a href="/#mission">Notre approche</a>
+    <a href="/#expertises">Expertises</a>
+    <a href="/#cas-clients">Cas clients</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#contact" class="btn btn-primary">Prendre rendez-vous →</a>
+  </nav>
+</div>
+
+{{ content | safe }}
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <span>© 2026 DS Business Unit — Gignac-la-Nerthe</span>
+    <nav class="footer-nav">
+      <a href="/#mission">Notre approche</a>
+      <a href="/#expertises">Expertises</a>
+      <a href="/#cas-clients">Cas clients</a>
+      <a href="/blog/">Blog</a>
+      <a href="/mentions-legales/">Mentions légales</a>
+      <a href="/cgv/">CGV</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

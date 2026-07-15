@@ -1,0 +1,36 @@
+---
+layout: base.njk
+title: "Blog — DS Business Unit"
+description: "Nos analyses et conseils sur le pilotage des fonctions support en entreprise."
+permalink: /blog/
+---
+<section class="blog-hero">
+  <div class="container">
+    <div class="eyebrow">Blog</div>
+    <h1>Nos analyses et conseils</h1>
+    <p>Ce que nous observons sur le terrain, pour piloter vos fonctions support avec plus de clarté.</p>
+  </div>
+</section>
+
+<section class="blog-list">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in collections.posts | reverse %}
+      <a href="{{ post.url }}" class="blog-card reveal">
+        {% if post.data.image %}
+        <div class="blog-card-img"><img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+        {% endif %}
+        <div class="blog-card-body">
+          <span class="blog-card-cat">{{ post.data.category }}</span>
+          <h2>{{ post.data.title }}</h2>
+          <p>{{ post.data.excerpt }}</p>
+          <span class="blog-card-date">{{ post.date | readableDate }}</span>
+        </div>
+      </a>
+      {% endfor %}
+      {% if collections.posts.length == 0 %}
+      <p style="color:var(--gray)">Aucun article publié pour le moment — revenez bientôt.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

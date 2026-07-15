@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+<section class="post-hero">
+  <div class="container">
+    <a href="/blog/" class="post-back">← Retour au blog</a>
+    <span class="post-category">{{ category }}</span>
+    <h1 class="post-title">{{ title }}</h1>
+    <div class="post-meta"><span>{{ page.date | readableDate }}</span></div>
+  </div>
+</section>
+
+{% if image %}
+<div class="post-cover"><img src="{{ image }}" alt="{{ title }}"></div>
+{% endif %}
+
+<article class="post-body">
+  <div class="container post-container">
+    {{ content | safe }}
+    <div class="post-cta">
+      <h3>Parlons de votre situation</h3>
+      <p>Notre équipe peut analyser gratuitement votre besoin en 20 minutes.</p>
+      <a href="/#contact" class="btn btn-primary">Prendre rendez-vous →</a>
+    </div>
+  </div>
+</article>
